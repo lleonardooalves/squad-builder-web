@@ -1,0 +1,98 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.image,
+.imagePlaceholder {
+  width: 78px;
+  height: 78px;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.imagePlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-surface-light);
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.team {
+  margin: 2px 0 0;
+  font-size: 14px;
+}
+
+.position {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.rating {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.gold {
+  background-color: #f6a500;
+  border-color: #ffd166;
+}
+
+.silver {
+  background-color: #bfc7d5;
+  border-color: #e5e7eb;
+}
+
+.bronze {
+  background-color: #b87333;
+  border-color: #d99a5b;
+}
+
+.default {
+  background-color: var(--color-surface-light);
+  border-color: var(--color-border);
+}
+
+.price {
+  margin: 0;
+  color: var(--color-primary);
+  font-weight: 700;
+}
