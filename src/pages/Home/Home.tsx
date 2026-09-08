@@ -1,12 +1,18 @@
+import { Loading } from '../../components/Loading/Loading';
 import { PlayerCard } from '../../components/PlayerCard/PlayerCard';
 import { usePlayers } from '../../hooks/usePlayers';
-import styles from '../Home/Home.module.css';
+import styles from './Home.module.css';
 
 export function Home() {
   const { players, isLoading } = usePlayers();
 
   if (isLoading) {
-    return <p>Carregando jogadores...</p>;
+    return (
+      <Loading
+        message="Carregando jogadores..."
+        slowMessage="A API está acordando. Isso pode levar até um minuto."
+      />
+    );
   }
 
   return (
