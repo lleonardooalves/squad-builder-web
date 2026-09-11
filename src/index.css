@@ -33,7 +33,12 @@
 
 body {
   margin: 0;
+  min-height: 100vh;
   background-color: var(--color-background);
+  background-image:
+    radial-gradient(60% 50% at 15% 0%, rgba(37, 99, 235, 0.18), transparent 60%),
+    radial-gradient(50% 45% at 100% 10%, rgba(139, 92, 246, 0.14), transparent 60%);
+  background-attachment: fixed;
   color: var(--color-text);
   font-family: system-ui, sans-serif;
 }

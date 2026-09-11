@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { Player } from '../../types/player';
 import { getRatingTier } from '../../utils/getRatingTier';
-import styles from '../PlayerCard/PlayerCard.module.css';
+import styles from './PlayerCard.module.css';
 
 type PlayerCardProps = {
   player: Player;
@@ -28,11 +28,13 @@ export function PlayerCard({ player }: PlayerCardProps) {
         <div className={styles.info}>
           <h3 className={styles.name}>{player.name}</h3>
           <p className={styles.team}>{player.team}</p>
-          <p className={styles.position}>{player.position}</p>
+          <p className={`${styles.position} ${styles[player.position]}`}>{player.position}</p>
         </div>
         <span className={`${styles.rating} ${styles[tier]}`}>{player.rating}</span>
       </div>
-      <p className={styles.price}>€ {player.price}M</p>
+      <div className={styles.footer}>
+        <p className={styles.price}>€ {player.price}M</p>
+      </div>
     </article>
   );
 }
