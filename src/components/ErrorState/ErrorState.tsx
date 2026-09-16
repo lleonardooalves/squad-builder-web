@@ -2,7 +2,7 @@ import styles from './ErrorState.module.css';
 
 type ErrorProps = {
   message?: string;
-  onRetry: () => void;
+  onRetry?: () => void;
 };
 
 export function ErrorState({
