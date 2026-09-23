@@ -27,3 +27,60 @@
 .brandAccent {
   color: var(--color-primary);
 }
+
+.session {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.user {
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.login {
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.logout {
+  padding: var(--space-xs) var(--space-md);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.logout:hover {
+  color: var(--color-text);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.login:focus-visible,
+.logout:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+.brandLink {
+  color: inherit;
+  text-decoration: none;
+}
